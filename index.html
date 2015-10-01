@@ -12,7 +12,7 @@
   </style>
 </head>
 <body>
-  <div id="wrapper">
+  <section id="navigation">
     <header>
      <h2>Yahoo OpenID Connect Example</h2>
     </header>
@@ -23,42 +23,39 @@
         <li><a href="#step3">Step 3</a></li>
       </ul>
     </nav>
-    <section id="step1">
-      <article>
-        <h2>Step 1: Create Application</h2>
+   </section>
+   <section id="main">
+      <aside id="main_aside">
+        The following section will show you how to use Yahoo's OpenID Connect.
+      </aside>
+      <article id="step1">
+        <header><h2>Step 1: Create Application</h2></header>
+
         <p>You'll need to go to https://developer.yahoo.com/apps/create/ and
            create an application.</p>
-        <p>For the purpose of this demo, use the callback URL (TBD).</p>
+
+        <p>For the purpose of this demo, use the following callback URL: 'https://zhouyaoji.github.io/openid_connect_example/index.html'</p>
+
         <p>Once you've created your application, you will be given a
            Consumer Key and Consumer Secret. We'll be using these in 
            the next step.
       </article>
-    </section>
-    <section id="step2">
-      <article>
-        <h2>Step 2: Get Authorization Code</h2>
+      <article id="step2">
+        <header><h2>Step 2: Get Authorization Code</h2></header>
         <p>Enter your Consumer Key and Consumer Secret in the fields below:</p>
         <p>
           <label for="client_id">Consumer Key</label>
-          <input type="text" inputmode="verbatim" name="client_id" placeholder="" required="required" />
+          <input type="text" inputmode="verbatim" name="client_id" placeholder="" required="required" /> <br/>
           <label for="client_id">Consumer Secret</label>
           <input type="text" inputmode="verbatim" name="consumer_secret" placeholder="" required="required" />
        </p>
        <button onclick="">Create Auth URL</button>
       </article> 
-    </section>
-    <aside id="auth">
-      Step 1: Create an application with Yahoo at https://developer.yahoo.com/apps/create/.
-    </aside>
-
-    <aside id="auth">
-      Step 2: Get Authorization Code: response_type=code
-    </aside>
-    <aside id="id_token">
-      Step 3: Get ID Token
-    </aside>
+   </section>  
     <footer>
-     
+    <ul>
+      <li><a href="http://developer.yahoo.com">YDN</a></li>
+      <li><a href="openid.net/connect/">OpenID Connect Core Specification</a></li>
      
     </footer>
   </div>   
