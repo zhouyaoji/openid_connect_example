@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yahoo OpenID Connect Example</title>
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -11,7 +12,6 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   <![endif]-->
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
@@ -40,7 +40,7 @@
       <aside id="main_aside">
         The following section will show you how to use Yahoo's OpenID Connect.
       </aside>
-      <article id="step1">
+      <article id="step1" class="progress">
         <header><h2>Step 1: Create Application</h2></header>
 
         <p>You'll need to go to https://developer.yahoo.com/apps/create/ and
@@ -51,9 +51,10 @@
         <p>Once you've created your application, you will be given a
            Consumer Key and Consumer Secret. We'll be using these in 
            the next step.</p>
-         <button onclick="" class="pure-button pure-button-active">Okay, I've created the app!</button>
+         <button onclick="" class="btn btn-large btn-primary" type="button">Okay, I've created the app!</button>
+         <div class="bar" style="width: 33%;"></div>
       </article>
-      <article id="step2">
+      <article id="step2" class="progress">
         <header><h2>Step 2: Create Auth URL</h2></header>
         <p>Enter your Consumer Key and Consumer Secret in the fields below:</p>
         <p>
@@ -62,11 +63,12 @@
           <label for="client_id">Consumer Secret</label>
           <input type="text" inputmode="verbatim" name="consumer_secret" placeholder="" required="required" />
        </p>
-       <button onclick="" class="pure-button pure-button-active">Create Auth URL</button>
+       <button onclick="" class="btn btn-large btn-primary" type="button">Create Auth URL</button>
        <p>You'll be taken to the Yahoo <b>Consent Screen</b>, and after you click **Accept**, you'll
           be taken back here.</p>
+        <div class="bar" style="width: 66%;"></div>
       </article> 
-      <article id="step3">
+      <article id="step3" class="progress">
         <header><h2>Step 3: Get ID Token</h2></header>
         <p>You'll see the Token ID in the URL path. It's a URL fragment that starts with a hash.</p>
         <p>Here's the ID Token formatted for you:</p>
@@ -74,6 +76,7 @@
            <textarea cols="200" rows="20">
            </textarea>
        </p>
+        <div class="bar" style="width: 99%;"></div>
       </article> 
    </section>  
     <footer> 
