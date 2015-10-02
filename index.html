@@ -9,6 +9,7 @@
   <![endif]-->
   <style type="text/css">
     header, section, footer, aside, nav, article, figure, audio, video, canvas  { display:block; }
+   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
   </style>
 </head>
 <body>
@@ -41,7 +42,7 @@
            the next step.
       </article>
       <article id="step2">
-        <header><h2>Step 2: Get Authorization Code</h2></header>
+        <header><h2>Step 2: Create Auth URL</h2></header>
         <p>Enter your Consumer Key and Consumer Secret in the fields below:</p>
         <p>
           <label for="client_id">Consumer Key</label>
@@ -50,6 +51,17 @@
           <input type="text" inputmode="verbatim" name="consumer_secret" placeholder="" required="required" />
        </p>
        <button onclick="">Create Auth URL</button>
+       <p>You'll be taken to the Yahoo <b>Consent Screen</b>, and after you click **Accept**, you'll
+          be taken back here.</p>
+      </article> 
+      <article id="step3">
+        <header><h2>Step 3: Get ID Token</h2></header>
+        <p>You'll see the Token ID in the URL path. It's a URL fragment that starts with a hash.</p>
+        <p>Here's the ID Token formatted for you:</p>
+        <p>
+           <textarea cols="200" rows="20">
+           </textarea>
+       </p>
       </article> 
    </section>  
     <footer>
