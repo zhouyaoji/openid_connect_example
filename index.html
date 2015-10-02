@@ -34,7 +34,7 @@
       </ul>
     </nav>
    </section>
-   <section id="main" class="tab-content">
+   <section id="stepTabs" class="tab-content">
       <article id="intro" role="tabpanel" class="tab-pane active" id="intro">
         <header><h1>Welcome to the Yahoo OpenID Connect Tutorial</h1></header>
         <p>We'll be going through three steps to complete the authentication.</p>
@@ -42,7 +42,7 @@
           <div class="bar" style="width: 5%;"></div>
         </div>
       </article>
-      <article id="step1" role="tabpanel" class="tab-pane active" id="intro">
+      <article id="step1" role="tabpanel" class="tab-pane active">
         <header><h2>Step 1: Create Application</h2></header>
         <p>You'll need to go to https://developer.yahoo.com/apps/create/ and
            create an application.</p>
@@ -96,11 +96,10 @@
     </footer>
   </div>   
   <script>
-    $(document).ready(function() {
- 
-    // Your code here.
- 
-    });
+    $('#stepTabs a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
   </script>
   </div>
 </body>
