@@ -17,11 +17,12 @@
     <header>
      <h2>Yahoo OpenID Connect Example</h2>
     </header>
-    <nav>
-      <ul>
-        <li><a href="#step1">Step 1</a></li>
-        <li><a href="#step2">Step 2</a></li>
-        <li><a href="#step3">Step 3</a></li>
+    <nav class="pure-menu pure-menu-horizontal pure-menu-scrollable">
+      <a href="#" class="pure-menu-link pure-menu-heading">OpenID Connect Flow Steps</a>
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="#step1">Step 1</a></li>
+        <li class="pure-menu-item"><a href="#step2">Step 2</a></li>
+        <li class="pure-menu-item"><a href="#step3">Step 3</a></li>
       </ul>
     </nav>
    </section>
@@ -39,7 +40,8 @@
 
         <p>Once you've created your application, you will be given a
            Consumer Key and Consumer Secret. We'll be using these in 
-           the next step.
+           the next step.</p>
+         <button onclick="" class="pure-button pure-button-active">Okay, I've created the app!</button>
       </article>
       <article id="step2">
         <header><h2>Step 2: Create Auth URL</h2></header>
@@ -50,7 +52,7 @@
           <label for="client_id">Consumer Secret</label>
           <input type="text" inputmode="verbatim" name="consumer_secret" placeholder="" required="required" />
        </p>
-       <button onclick="">Create Auth URL</button>
+       <button onclick="" class="pure-button pure-button-active">Create Auth URL</button>
        <p>You'll be taken to the Yahoo <b>Consent Screen</b>, and after you click **Accept**, you'll
           be taken back here.</p>
       </article> 
@@ -64,11 +66,11 @@
        </p>
       </article> 
    </section>  
-    <footer>
-    <ul>
-      <li><a href="http://developer.yahoo.com">YDN</a></li>
-      <li><a href="openid.net/connect/">OpenID Connect Core Specification</a></li>
-     
+    <footer class="pure-menu pure-menu-horizontal">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="http://developer.yahoo.com">YDN</a></li>
+        <li class="pure-menu-item"><a href="openid.net/connect/">OpenID Connect Core Specification</a></li>
+      </ul>
     </footer>
   </div>   
 </body>
