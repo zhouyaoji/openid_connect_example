@@ -26,25 +26,24 @@
      <h2>Yahoo OpenID Connect Example</h2>
     </header>
     <nav> 
-      <div class="pure-menu pure-menu-horizontal pure-menu-scrollable">
-        <a href="#" class="pure-menu-link pure-menu-heading">OpenID Connect Flow Steps</a>
-        <ul class="pure-menu-list">
-          <li class="pure-menu-item"><a href="#step1">Step 1</a></li>
-          <li class="pure-menu-item"><a href="#step2">Step 2</a></li>
-          <li class="pure-menu-item"><a href="#step3">Step 3</a></li>
-        </ul>
-      </div>
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#intro" aria-controls="intro" role="tab" data-toggle="tab">Intro</a></li>
+        <li role="presentation"><a href="#step1" aria-controls="step1" role="tab" data-toggle="tab">Step 1</a></li>
+        <li role="presentation"><a href="#step2" aria-controls="step2" role="tab" data-toggle="tab">Step 2</a></li>
+        <li role="presentation"><a href="#step3" aria-controls="step3" role="tab" data-toggle="tab">Step 3</a></li>
+      </ul>
     </nav>
    </section>
-   <section id="main">
-      <aside id="main_aside">
-        The following section will show you how to use Yahoo's OpenID Connect.
-      </aside>
-      <article id="step1">
-        <header><h2>Step 1: Create Application</h2></header>
+   <section id="main" class="tab-content">
+      <article id="intro" role="tabpanel" class="tab-pane active" id="intro">
+        <header><h1>Welcome to the Yahoo OpenID Connect Tutorial</h1></header>
+        <p>We'll be going through three steps to complete the authentication.</p>
         <div class="progress">
-          <div class="bar" style="width: 33%;"></div>
+          <div class="bar" style="width: 5%;"></div>
         </div>
+      </article>
+      <article id="step1" role="tabpanel" class="tab-pane active" id="intro">
+        <header><h2>Step 1: Create Application</h2></header>
         <p>You'll need to go to https://developer.yahoo.com/apps/create/ and
            create an application.</p>
 
@@ -54,13 +53,12 @@
            Consumer Key and Consumer Secret. We'll be using these in 
            the next step.</p>
          <button onclick="" class="btn btn-large btn-primary" type="button">Okay, I've created the app!</button>
-         <div class="bar" style="width: 33%;"></div>
-      </article>
-      <article id="step2">
-        <header><h2>Step 2: Create Auth URL</h2></header>
-        <div  class="progress">
-          <div class="bar" style="width: 66%;"></div>
+         <div class="progress">
+           <div class="bar" style="width: 33%;"></div>
         </div>
+      </article>
+      <article id="step2" role="tabpanel" class="tab-pane">
+        <header><h2>Step 2: Create Auth URL</h2></header>
         <p>Enter your Consumer Key and Consumer Secret in the fields below:</p>
         <p>
           <label for="client_id">Consumer Key</label>
@@ -71,18 +69,21 @@
        <button onclick="" class="btn btn-large btn-primary" type="button">Create Auth URL</button>
        <p>You'll be taken to the Yahoo <b>Consent Screen</b>, and after you click **Accept**, you'll
           be taken back here.</p>
-      </article> 
-      <article id="step3">
-        <header><h2>Step 3: Get ID Token</h2></header>
-        <div class="progress">
-          <div class="bar" style="width: 99%;"></div>
+        <div  class="progress">
+          <div class="bar" style="width: 66%;"></div>
         </div>
+      </article> 
+      <article id="step3" role="tabpanel" class="tab-pane">
+        <header><h2>Step 3: Get ID Token</h2></header>
         <p>You'll see the Token ID in the URL path. It's a URL fragment that starts with a hash.</p>
         <p>Here's the ID Token formatted for you:</p>
         <p>
            <textarea cols="200" rows="20">
            </textarea>
        </p>
+        <div class="progress">
+          <div class="bar" style="width: 99%;"></div>
+        </div>
       </article> 
    </section>  
     <footer> 
