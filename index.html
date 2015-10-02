@@ -40,9 +40,11 @@
       <aside id="main_aside">
         The following section will show you how to use Yahoo's OpenID Connect.
       </aside>
-      <article id="step1" class="progress">
+      <article id="step1">
         <header><h2>Step 1: Create Application</h2></header>
-
+        <div class="progress">
+          <div class="bar" style="width: 33%;"></div>
+        </div>
         <p>You'll need to go to https://developer.yahoo.com/apps/create/ and
            create an application.</p>
 
@@ -54,8 +56,11 @@
          <button onclick="" class="btn btn-large btn-primary" type="button">Okay, I've created the app!</button>
          <div class="bar" style="width: 33%;"></div>
       </article>
-      <article id="step2" class="progress">
+      <article id="step2">
         <header><h2>Step 2: Create Auth URL</h2></header>
+        <div  class="progress">
+          <div class="bar" style="width: 66%;"></div>
+        </div>
         <p>Enter your Consumer Key and Consumer Secret in the fields below:</p>
         <p>
           <label for="client_id">Consumer Key</label>
@@ -66,17 +71,18 @@
        <button onclick="" class="btn btn-large btn-primary" type="button">Create Auth URL</button>
        <p>You'll be taken to the Yahoo <b>Consent Screen</b>, and after you click **Accept**, you'll
           be taken back here.</p>
-        <div class="bar" style="width: 66%;"></div>
       </article> 
-      <article id="step3" class="progress">
+      <article id="step3">
         <header><h2>Step 3: Get ID Token</h2></header>
+        <div class="progress">
+          <div class="bar" style="width: 99%;"></div>
+        </div>
         <p>You'll see the Token ID in the URL path. It's a URL fragment that starts with a hash.</p>
         <p>Here's the ID Token formatted for you:</p>
         <p>
            <textarea cols="200" rows="20">
            </textarea>
        </p>
-        <div class="bar" style="width: 99%;"></div>
       </article> 
    </section>  
     <footer> 
