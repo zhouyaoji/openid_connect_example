@@ -8,7 +8,7 @@ list-style-type: none;
 padding-right: 20px;
 }
 .bottom {
-   position: fixed;
+   position: relative;
    left:0px;
    bottom:100px;
    height:30px;
