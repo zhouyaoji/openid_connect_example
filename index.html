@@ -33,15 +33,15 @@
       </ul>
     </nav>
    </section>
-   <section id="stepTabs" class="tab-content">
-      <article id="intro" role="tabpanel" class="tab-pane active" id="intro">
+   <section id="stepTabs" class="tab-content panel panel-default">
+      <article id="intro" role="tabpanel" class="tab-pane active panel-body" id="intro">
         <header><h1>Welcome to the Yahoo OpenID Connect Tutorial</h1></header>
         <p>We'll be going through three steps to complete the authentication.</p>
         <div class="progress">
           <div class="bar" style="width: 5%;"></div>
         </div>
       </article>
-      <article id="step1" role="tabpanel" class="tab-pane active">
+      <article id="step1" role="tabpanel" class="tab-pane panel-body">
         <header><h2>Step 1: Create Application</h2></header>
         <p>You'll need to go to https://developer.yahoo.com/apps/create/ and
            create an application.</p>
@@ -51,12 +51,13 @@
         <p>Once you've created your application, you will be given a
            Consumer Key and Consumer Secret. We'll be using these in 
            the next step.</p>
-         <button onclick="" class="btn btn-default"" type="button">Okay, I've created the app!</button>
-         <div class="progress">
-           <div class="bar" style="width: 33%;"></div>
+         <button onclick="" class="btn btn-default" type="button">Okay, I've created the app!</button>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="33" style="width: 33%;" aria-valuemin="0" aria-valuemax="100"></div>
+          <span class="sr-only">33% Complete</span>
         </div>
       </article>
-      <article id="step2" role="tabpanel" class="tab-pane">
+      <article id="step2" role="tabpanel" class="tab-pane panel-body">
         <header><h2>Step 2: Create Auth URL</h2></header>
         <p>Enter your Consumer Key and Consumer Secret in the fields below:</p>
         <p>
@@ -65,11 +66,13 @@
           <label for="client_id">Consumer Secret</label>
           <input type="text" inputmode="verbatim" name="consumer_secret" placeholder="" required="required" />
        </p>
-       <button onclick="" class="btn btn-default"" type="button">Create Auth URL</button>
+       <button onclick="" class="btn btn-default" type="button">Create Auth URL</button>
        <p>You'll be taken to the Yahoo <b>Consent Screen</b>, and after you click **Accept**, you'll
           be taken back here.</p>
-        <div  class="progress">
-          <div class="bar" style="width: 66%;"></div>
+
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="66" style="width: 66%;" aria-valuemin="0" aria-valuemax="100"></div>
+          <span class="sr-only">66% Complete</span>
         </div>
       </article> 
       <article id="step3" role="tabpanel" class="tab-pane">
@@ -80,14 +83,15 @@
            <textarea cols="200" rows="20">
            </textarea>
        </p>
-        <div class="progress">
-          <div class="bar" style="width: 99%;"></div>
-        </div>
+       <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" style="width: 100%;" aria-valuemin="0" aria-valuemax="100"></div>
+          <span class="sr-only">100% Complete</span>
+       </div>
       </article> 
    </section>  
     <footer class="navbar navbar-default navbar-fixed-bottom"> 
       <div class="container">
-        <ul>
+        <ul id="navlist">
           <li class="navbar-text"><a href="http://developer.yahoo.com">YDN</a></li>
           <li class="navbar-text"><a href="openid.net/connect/">OpenID Connect Core Specification</a></li>
         </ul>
