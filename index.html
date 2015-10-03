@@ -47,17 +47,17 @@
       </article>
       <article id="step1" role="tabpanel" class="tab-pane panel-body">
         <header><h2>Step 1: Create Application</h2></header>
-        <ul>
+        <ol>
           <li><a href="https://developer.yahoo.com/apps/create/">Create a YDN application</a></li>
           <li>Use the following callback URL <code>https://zhouyaoji.github.io/openid_connect_example/index.html</code>.
               <p>Once you've created your application, you will be given a
                  Consumer Key and Consumer Secret. We'll be using these in 
                  the next step.</p>
           </li>
-          <li>Great, I have my app! What next?
-              <p><button onclick="" class="btn btn-default" type="button">Let's Go to Step 2!</button></p>
+          <li>Great, I have my app! What next?<br/>
+              <p><button onclick="" class="btn btn-default" type="button" id="step1_button">Let's Go to Step 2!</button></p>
           </li>
-        </ul>
+        </ol>
          <div class="progress bottom">
            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%">
              <span class="sr-only">33% Complete</span>
@@ -115,6 +115,10 @@
       $("#start_button").click(function (e) {
         e.preventDefault();
         $('#stepTabs a[href="#step1"]').tab('show');
+      });
+      $("#step1_button").click(function (e) {
+        e.preventDefault();
+        $('#stepTabs a[href="#step2"]').tab('show');
       });
    });
   </script>
