@@ -105,14 +105,16 @@
     </footer>
   </div>   
   <script>
-    $('#stepTabs a').click(function (e) {
-      e.preventDefault()
-      $(this).tab('show')
-    });
-    $('#stepTabs a[href="#step1"]').tab('show');
-    $("#start_button").click(function (e) {
-      e.preventDefault();
-    });
+    $( document ).ready(function() {
+      $('#stepTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      });
+      $('#stepTabs a[href="#step1"]').tab('show');
+      $("#start_button").click(function (e) {
+        e.preventDefault();
+      });
+   });
   </script>
   </div>
 </body>
