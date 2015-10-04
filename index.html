@@ -122,15 +122,14 @@
         $('#stepTabs a[href="#step2"]').tab('show');
       });
       $("#auth_url").click(function (e) {
-        e.preventDefault();
+         e.preventDefault();
          ck = $('#client_id').val();
          if (ck) {
            alert(ck);
-         } else
+         } else {
            $(this).popover('show');
          } 
       });
-        
    });
   </script>
   </div>
