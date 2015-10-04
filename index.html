@@ -126,7 +126,7 @@
          if (ck) {
             auth_url = "https://api.login.yahoo.com/oath2/req_auth?client_id=" + ck + "&response_type=id_token&redirect_uri=https://https://zhouyaoji.github.io/openid_connect_example/";            
             auth_url_link = "<a href='" + auth_url + "'>" + auth_url + "</a>";
-            #("auth_url_text").html(auth_url_link);
+            $("#auth_url_text").html(auth_url_link);
          } else {
            $(this).popover('show');
          } 
