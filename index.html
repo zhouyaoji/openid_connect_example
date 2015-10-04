@@ -69,11 +69,12 @@
         <p>Enter your Consumer Key and Consumer Secret in the fields below:</p>
         <p>
           <label for="client_id">Consumer Key</label>
-          <input type="text" inputmode="verbatim" name="client_id" placeholder="" required="required" /> <br/>
-          <label for="client_id">Consumer Secret</label>
-          <input type="text" inputmode="verbatim" name="consumer_secret" placeholder="" required="required" />
+          <input type="text" inputmode="verbatim" name="client_id" placeholder="" required="required" id="client_id" /> <br/>
+          <label for="client_secret">Consumer Secret</label>
+          <input type="text" inputmode="verbatim" id="client_secret" name="consumer_secret" placeholder="" required="required" />
        </p>
-       <p><button onclick="" class="btn btn-default" type="button">Create Auth URL</button></p>
+       <div id="auth_url_div"></div>
+       <p><button onclick="" class="btn btn-default" type="button" id="auth_url">Create Auth URL</button></p>
        <p>You'll be taken to the Yahoo <b>Consent Screen</b>, and after you click **Accept**, you'll
           be taken back here.</p>
         <div class="progress">
@@ -120,6 +121,12 @@
         e.preventDefault();
         $('#stepTabs a[href="#step2"]').tab('show');
       });
+      $("#auth_url").click(function (e) {
+        e.preventDefault();
+         ck = $('#client_id').value;
+         alert(ck);
+      });
+        
    });
   </script>
   </div>
