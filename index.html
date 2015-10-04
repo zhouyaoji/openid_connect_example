@@ -58,7 +58,7 @@
               <p><button onclick="" class="btn btn-default" type="button" id="step1_button">Let's Go to Step 2!</button></p>
           </li>
         </ol>
-         <div class="progress bottom">
+         <div class="progress">
            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%">
              <span class="sr-only">33% Complete</span>
            </div>
@@ -66,15 +66,14 @@
       </article>
       <article id="step2" role="tabpanel" class="tab-pane panel-body">
         <header><h2>Step 2: Create Auth URL</h2></header>
-        <p>Enter your Consumer Key and Consumer Secret in the fields below:</p>
+        <p>Enter your Consumer Key in the field below:</p>
         <p>
           <label for="client_id">Consumer Key</label>
           <input type="text" inputmode="verbatim" name="client_id" placeholder="" required="required" id="client_id" /> <br/>
-          <label for="client_secret">Consumer Secret</label>
-          <input type="text" inputmode="verbatim" id="client_secret" name="consumer_secret" placeholder="" required="required" />
        </p>
        <div id="auth_url_div"></div>
-       <p><button onclick="" class="btn btn-default" type="button" id="auth_url" data-toggle="tooltip" title="first tooltip">Create Auth URL</button></p>
+       <p><button onclick="" class="btn btn-default" type="button" id="auth_url" data-toggle="tooltip" title="Please enter both your Client ID and Client Secret.">Create Auth URL</button></p>
+       <span id="auth_url_text"></span>
        <p>You'll be taken to the Yahoo <b>Consent Screen</b>, and after you click **Accept**, you'll
           be taken back here.</p>
         <div class="progress">
@@ -125,7 +124,9 @@
          e.preventDefault();
          ck = $('#client_id').val();
          if (ck) {
-           alert(ck);
+            auth_url = "https://api.login.yahoo.com/oath2/req_auth?client_id=" + ck + "&response_type=id_token&redirect_uri=https://https://zhouyaoji.github.io/openid_connect_example/";            
+            auth_url_link = "<a href='" + auth_url + "'>" + auth_url + "</a>";
+            #("auth_url_text").html(auth_url_link);
          } else {
            $(this).popover('show');
          } 
