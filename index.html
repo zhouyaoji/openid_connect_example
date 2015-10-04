@@ -74,7 +74,7 @@
           <input type="text" inputmode="verbatim" id="client_secret" name="consumer_secret" placeholder="" required="required" />
        </p>
        <div id="auth_url_div"></div>
-       <p><button onclick="" class="btn btn-default" type="button" id="auth_url">Create Auth URL</button></p>
+       <p><button onclick="" class="btn btn-default" type="button" id="auth_url" data-toggle="tooltip" title="first tooltip">Create Auth URL</button></p>
        <p>You'll be taken to the Yahoo <b>Consent Screen</b>, and after you click **Accept**, you'll
           be taken back here.</p>
         <div class="progress">
@@ -123,8 +123,12 @@
       });
       $("#auth_url").click(function (e) {
         e.preventDefault();
-         ck = $('#client_id').value;
-         alert(ck);
+         ck = $('#client_id').val();
+         if (ck) {
+           alert(ck);
+         } else
+           $(this).popover('show');
+         } 
       });
         
    });
