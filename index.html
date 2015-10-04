@@ -124,7 +124,7 @@
          e.preventDefault();
          ck = $('#client_id').val();
          if (ck) {
-            auth_url = "https://api.login.yahoo.com/oath2/request_auth?client_id=" + ck + "&response_type=id_token&redirect_uri=https://zhouyaoji.github.io/openid_connect_example/&scope=openid,mail-r&nonce=12345";            
+            auth_url = "https://api.login.yahoo.com/oauth2/request_auth?client_id=" + ck + "&response_type=id_token&redirect_uri=https://zhouyaoji.github.io/openid_connect_example/&scope=openid,mail-r&nonce=12345";            
             auth_url_link = "<a href='" + auth_url + "'>" + auth_url + "</a>";
             $("#auth_url_text").html(auth_url_link);
          } else {
